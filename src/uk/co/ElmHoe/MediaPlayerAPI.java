@@ -56,14 +56,4 @@ public class MediaPlayerAPI {
 
 
 
-	public static void playAndPause() {
-		if (MediaPlayerAPI.mediaPlayer.getStatus().equals(MediaPlayer.Status.PLAYING)) {
-			mediaPlayer.pause();
-			System.out.println("PLAYER WAS PLAYING, now paused.");
-		} else {
-			mediaPlayer.play();
-			System.out.println("PLAYER WAS PAUSED, now playing.");
-
-		}
-	}
 }

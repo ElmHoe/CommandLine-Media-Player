@@ -3,6 +3,7 @@ package uk.co.ElmHoe.Utilities;
 import java.io.IOException;
 import java.util.Scanner;
 
+import uk.co.ElmHoe.MediaTools.Play;
 import uk.co.ElmHoe.MediaTools.Quit;
 import uk.co.ElmHoe.MediaTools.Tools;
 import uk.co.ElmHoe.MediaTools.VolumeUpdate;
@@ -86,6 +87,18 @@ public static Scanner s;
     		Quit.exitApp();
     	}
 			
+    	if (lineSplit[0].equals(Commands.CMD_PAUSE.command) || (lineSplit[0].equals(Commands.CMD_PLAY.command))) {
+    		int update = Play.playAndPause(lineSplit[0].toString());
+    		if (update == 2) {
+    			System.out.println("Player Paused.");
+    		}else if (update == 1) {
+    			System.out.println("Player Resuming");
+    		}else if (update == 0) {
+    			System.out.println("Invalid MediaPlayer State.");
+    		}else {
+    			System.out.println("How did this even happen?");
+    		}
+    	}
     	else {}
     	
 		msgUpdate();
