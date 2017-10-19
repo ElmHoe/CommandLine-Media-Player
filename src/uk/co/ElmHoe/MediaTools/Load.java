@@ -8,6 +8,7 @@ import java.util.Scanner;
 import javafx.embed.swing.JFXPanel;
 import uk.co.ElmHoe.MediaPlayerAPI;
 import uk.co.ElmHoe.Utilities.ThreadUtility;
+import uk.co.ElmHoe.Utilities.UsageUtility;
 
 /*
  * This class, is the class used for everything needed when the application starts.
@@ -27,10 +28,14 @@ public static JFXPanel fxPanel;
 		startThread();
 		onFirstRun();
 		
+		//UsageLogging
+		UsageUtility.logUpdate();
+
 	
-		//Listen for messages.
+		//Listen for messages (MUST COME LAST!)
 		ThreadUtility.s = new Scanner(new InputStreamReader(System.in));
 		ThreadUtility.msgUpdate();
+		
 
 	}
 	
