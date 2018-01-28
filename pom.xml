@@ -9,6 +9,11 @@
     	<artifactId>mp3agic</artifactId>
 		<version>0.9.0</version>
   	</dependency>
+  <dependency>
+    <groupId>de.saxsys</groupId>
+    <artifactId>jfx-testrunner</artifactId>
+    <version>1.2</version>
+  </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
