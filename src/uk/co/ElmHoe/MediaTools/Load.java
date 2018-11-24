@@ -25,7 +25,11 @@ public static JFXPanel fxPanel;
 	
 	public static void onLoad(){
 		//These two MUST come first onLoad.
-		startThread();
+		if (!startThread())
+		{
+			System.out.println("Unable to start a thread - note this is required for the music player.");
+			System.exit(0);
+		}
 		onFirstRun();
 		
 		//UsageLogging
@@ -44,7 +48,6 @@ public static JFXPanel fxPanel;
 			fxPanel = new JFXPanel();
 			return true;
 		}catch(NullPointerException e){
-			System.out.println("poop");
 			return false;
 		}
 	}

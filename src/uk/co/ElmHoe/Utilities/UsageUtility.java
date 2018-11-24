@@ -19,10 +19,9 @@ public class UsageUtility {
     }
     
     public static void logUpdate() {
-    	new Timer(5000,new ActionListener() {
+    	new Timer(1000,new ActionListener() {
     		@Override
     		public void actionPerformed(ActionEvent ae) {
-
     			System.out.println(TimeUtility.getTime() + " : " + usageUpdate() + "/mb" + " out of maximum of: " + (Runtime.getRuntime().totalMemory() / (1024*1024)) + "/mb");
     		}
     	}).start();

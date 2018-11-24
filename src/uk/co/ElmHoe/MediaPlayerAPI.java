@@ -14,12 +14,15 @@ public class MediaPlayerAPI {
 	public static ArrayList<String> filesPlayed = new ArrayList<String>();
 	public static String titleOfSong = "";
 	
-	
+	public MediaPlayerAPI get()
+	{
+		return this;
+	}
 	
 	public static void main(String[] args) throws IOException {
 		Load.onLoad();
 	}
-
+	
 	/*
 	 * This plays a new song. Checks if anything else was playing, cancels them,
 	 * continues to play this.

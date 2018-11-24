@@ -108,7 +108,7 @@ public class Tools {
 		 */
 
 		ArrayList<String> Directories = new ArrayList<String>();
-		Directories.add(System.getProperty("user.dir"));
+		Directories.add(System.getProperty("user.dir") + "\\resources\\");
 		Directories.add("D:\\Music\\");
 		Directories.add("C:\\Users\\" + System.getProperty("user.name") + "\\Music\\");
 		Directories.add("D:\\Music\\Pandora\\");

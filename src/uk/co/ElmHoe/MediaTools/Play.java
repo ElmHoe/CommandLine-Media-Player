@@ -61,7 +61,7 @@ public class Play {
 			} else {
 				if (p.equals(Commands.CMD_PAUSE.valueToString())) {
 					return 0;
-				}else if (p.equals(Commands.CMD_PLAY.valueToString())) {
+				} else if (p.equals(Commands.CMD_PLAY.valueToString())) { 
 					uk.co.ElmHoe.MediaPlayerAPI.mediaPlayer.play();
 					return 1;
 				}
